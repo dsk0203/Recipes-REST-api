@@ -4,20 +4,14 @@ import pandas as pd
 
 # loads data from drive
 def load_recipes():
-    df = pd.read_csv(r"C:\Users\dsk02\Desktop\python_projects\nn_recipes\recipes.csv")
+    df = pd.read_csv(r"C:\Users\dsk02\Desktop\python_projects\nn_recipes\cleaned_data.csv")
     return df
 
-# peek function to show number of lines ** Thought was dictionary but ended up being list
-def peek():
-    df = load_recipes()
-    print(df.head())
-
-# clean input array
-def clean():
-   return 1 
-
+def transition_dictionary():
+    return 0
+    # write in jupyter notebook......
 
 
 if __name__ == '__main__':
-    peek()
-
+    new_data = load_recipes()
+    print(new_data.sample(n=15))
