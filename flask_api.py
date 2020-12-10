@@ -2,25 +2,43 @@
 from flask import Flask, jsonify, request
 import pickle
 
+
 app = Flask(__name__)
+
 
 @app.route('/recipes', methods=['GET'])
 def get_ingred_list():
-    # change location of serialized dictionary??
-    with open(r"C:\Users\dsk02\Desktop\python_projects\nn_recipes\recipes_dict.pickle", 'rb') as handle:
-        b = pickle.load(handle)
-
     
+    # opening, change file location on load
+    with open(r"C:\Users\dsk02\Desktop\python_projects\nn_recipes\recipes_dict.pickle", 'rb') as handle:
+            my_recipes = pickle.load(handle)        
+
+    if not len(my_recipes) > 0:
+        raise ValueError('could not find the file')
+ 
+    print(my_recipes['egg'])
+    #call the ingredient list
+    #my_dict = get_dict()
+
+    #check the deserializing became a dictionary
+    #if not type(my_recipes) == type(dict):
+    #    raise ValueError
+    
+    # change location of serialized dictionary??       
     ingred_list = str(request.args.getlist("i"))
     
     # hold array for recipes
     recipe_hold = []
-    
+
+    print(ingred_list)
+
     # cycle through different ingredients passed
     for each_ingredient in ingred_list:
+
+        print(my_recipes[each_ingredient])
         
         # append to the hold array
-        recipe_hold.append(b[each_ingredient])
+        recipe_hold.append(my_recipes[each_ingredient])
     
     # i'll write the code for default dictionary
     recipe_count = {}
@@ -30,9 +48,6 @@ def get_ingred_list():
         else:
             recipe_count[recipe] += 1
         
-
-
-
     return "you should try cooking {}.".format(max(recipe_count))
 
 if __name__ == '__main__':
