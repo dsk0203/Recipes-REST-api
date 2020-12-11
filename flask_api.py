@@ -16,7 +16,6 @@ def get_ingred_list():
     if not len(my_recipes) > 0:
         raise ValueError('could not find the file')
  
-    print(my_recipes['egg'])
     #call the ingredient list
     #my_dict = get_dict()
 
@@ -25,8 +24,9 @@ def get_ingred_list():
     #    raise ValueError
     
     # change location of serialized dictionary??       
-    ingred_list = str(request.args.getlist("i"))
-    
+    ingred_list = (request.args.getlist("i"))
+    # have to convert?? 
+    ingred_list = list(ingred_list)
     # hold array for recipes
     recipe_hold = []
 
@@ -34,8 +34,11 @@ def get_ingred_list():
 
     # cycle through different ingredients passed
     for each_ingredient in ingred_list:
-
-        print(my_recipes[each_ingredient])
+       
+        print(each_ingredient)
+        convert = str(each_ingredient)
+        print(convert)
+        print(my_recipes[convert])
         
         # append to the hold array
         recipe_hold.append(my_recipes[each_ingredient])
