@@ -2,7 +2,7 @@
 
 A REST API running on AWS (Amazon Web Services) EC2 instance Ubuntu 18.02 LTS.
 
-Taking incredibly messy data, transforming this data into a helpful API that can return recipes to cook based on current ingredients on hand. Pass ingredients with HTTP and GET request. 
+Taking incredibly messy data, transformed this data into a helpful API that can return recipes to cook based on current ingredients on hand. Pass ingredients with in browser with a GET request and receive possible recipes to cook with ingredients on hand.
 
 
 User will pass in ingredients with
