@@ -1,11 +1,24 @@
 # Recipes-REST-api
 
-Taking incredibly messy data, transforming this data into a helpful application that can return recipes based on current ingredients on hand. 
-A REST API running on AWS (Amazon Web Services) Ubuntu 18.02 EC2 instance.
+A REST API running on AWS (Amazon Web Services) EC2 instance Ubuntu 18.02 LTS.
 
-start server.JPG
+Taking incredibly messy data, transforming this data into a helpful API that can return recipes to cook based on current ingredients on hand. Pass ingredients with HTTP and GET request. 
 
 
-![Alt text](start server.jpg?raw=true "Image")
-![Alt text](start server.jpg "dpg")
-![ScreenShot](https://github.com/dsk0203/Recipes-REST-api/blob/master/start%20server.JPG)
+User will pass in ingredients with
+
+18.224.181.112:8080/recipes?i=ingredient1"&"i=ingredient2"&"i=ingredient3 etc..
+
+
+The original Data:
+
+![ScreenShot](https://github.com/dsk0203/Recipes-REST-api/blob/master/original_dataset.JPG)
+
+
+Curl Example & Response: 
+
+![ScreenShot](https://github.com/dsk0203/Recipes-REST-api/blob/master/curl.JPG)
+
+
+
+
