@@ -2,3 +2,4 @@ nn/
 *.csv
 *.json
 .ipynb_checkpoints
+*.jpg
