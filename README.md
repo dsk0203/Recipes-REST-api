@@ -9,6 +9,13 @@ User will pass in ingredients with
 
 18.224.181.112:8080/recipes?i=ingredient1"&"i=ingredient2"&"i=ingredient3 etc..
 
+Cleaning Data Files:
+Data_Clean.ipynb
+API_backbone.ipynb
+
+File running on EC2:
+flask_api_server.py
+
 
 The original Data:
 
