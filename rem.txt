@@ -1,4 +1,0 @@
-# base command for get request to api, passing multiple ingredients
-curl  http://127.0.0.1:5000/recipes?i=pie"&"i=blue
-
-(some server running flask)

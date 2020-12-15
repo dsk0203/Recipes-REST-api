@@ -1,0 +1,7 @@
+# base command for get request to api, passing multiple ingredients (how curl server)
+
+curl 18.224.181.112:8080/recipes?i=egg"&"i=pepper
+
+where i = different ingredients
+
+(some server running flask)
